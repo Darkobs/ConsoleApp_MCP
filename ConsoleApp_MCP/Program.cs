@@ -8,6 +8,7 @@ var builder = Host.CreateApplicationBuilder(args);
 
 builder.Services.AddMcpServer()
     .WithStdioServerTransport()
+    .WithToolsFromAssembly()
     .WithTools<WeatherTools>();
 
 builder.Logging.AddConsole(options =>
